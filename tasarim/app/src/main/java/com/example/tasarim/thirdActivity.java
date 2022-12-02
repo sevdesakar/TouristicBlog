@@ -1,0 +1,52 @@
+package com.example.tasarim;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.ActivityOptions;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Pair;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.ImageView;
+
+public class thirdActivity extends AppCompatActivity {
+
+    ImageView down_arrow;
+    Animation from_bottom;
+    Button yorum_button;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_third);
+
+        down_arrow = findViewById(R.id.down_arrow);
+        from_bottom = AnimationUtils.loadAnimation(this, R.anim.anim_from_bottom);
+        down_arrow.setAnimation(from_bottom);
+
+
+        down_arrow.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(thirdActivity.this, MainActivity.class);
+                Pair[] pairs = new Pair[1];
+                pairs[0] = new Pair<View, String>(down_arrow, "background_image_transition");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(thirdActivity.this, pairs);
+                startActivity(intent, options.toBundle());
+            }
+        });
+
+        yorum_button=findViewById(R.id.yorum_button);
+        yorum_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(thirdActivity.this, CommentActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+}

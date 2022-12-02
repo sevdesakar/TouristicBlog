@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "812458817891",
+    "firebase_url": "https://gezgin-cc20b-default-rtdb.firebaseio.com",
+    "project_id": "gezgin-cc20b",
+    "storage_bucket": "gezgin-cc20b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812458817891:android:861887b8fe235334c57b56",
+        "android_client_info": {
+          "package_name": "com.example.tasarim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812458817891-e6vk7hg6k7jaanitklh8erff48880uef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBzOe8EHgz7jfKojxNH1du8maxhBfAO2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812458817891-e6vk7hg6k7jaanitklh8erff48880uef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

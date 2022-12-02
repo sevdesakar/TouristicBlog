@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Gezenti</string>
+
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Şifre</string>
+    <string name="no_image_selected">Resim Seçilmedi</string>
+    <string name="uploaded">Yüklendi</string>
+    <string name="failed">Başarısız</string>
+    <string name="uploading">Yükleniyor</string>
+
+</resources>

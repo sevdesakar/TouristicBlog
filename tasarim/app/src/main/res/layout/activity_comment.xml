@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.appcompat.widget.Toolbar>
+    <ImageView
+        android:layout_below="@id/toolbar"
+       android:layout_marginStart="20dp"
+        android:id="@+id/geri"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:src="@drawable/icon_back" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="30dp"
+        tools:listitem="@layout/yorum_item"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottom_relative">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="40dp"
+        android:layout_alignParentBottom="true">
+
+
+
+                <ImageView
+                    android:id="@+id/deneme"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_account_circle_24" />
+
+
+                <EditText
+                    android:id="@+id/edt_yorumEkle"
+                    style="@style/modifiedEditText"
+                    android:layout_toEndOf="@id/deneme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:layout_toStartOf="@id/txt_gonder"
+                    android:textColor="#58A6F4" />
+
+            <TextView
+            android:paddingStart="-1dp"
+            android:gravity="center"
+            android:id="@+id/txt_gonder"
+            style="@style/loginButton"
+            android:layout_width="88dp"
+            android:layout_height="52dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="1dp"
+
+            android:text="Gönder"
+
+            />
+
+
+    </RelativeLayout>
+</RelativeLayout>
